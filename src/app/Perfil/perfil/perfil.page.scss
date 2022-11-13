@@ -1,0 +1,82 @@
+.titulo
+{
+    font-size: 35px;
+
+    
+}
+.head-title
+{
+font-size: 25px;
+}
+.perfilimg
+{
+    width: 230px;
+    height: 230px;
+    border-radius: 200px;
+}
+.content
+{
+    text-align: center;
+}
+ion-title
+{
+    font-size: 25px;
+}
+.descri
+{
+    margin-top:-25px;
+    font-size: 25px;
+    text-align: start;
+    padding: 50px;
+    height: 150%;
+}
+.descri2
+{
+    margin-top: 20px; 
+    
+    font-size: 25px;
+    text-align: center;
+    
+}
+.profile
+{
+    text-align: center;
+}
+ion-button{
+    margin-top: 10px;
+    font-size: 20px;
+    height: 45px;
+    margin-left: 20px;
+}
+.btnimg
+{
+  background-image: url('../../../assets/Imagenes/instagram.png');
+  color:blue;
+  width: 90px;
+  height: 90px;
+}
+ion-fab{
+    position: absolute;
+    right: 22%;
+    
+}
+ion-fab-button
+{
+    width: 70px;
+    height: 70px;
+    
+}
+ion-fab-button ion-icon
+{
+    font-size: 50px;
+    
+}
+.imgrow
+{
+    text-align: center;
+}
+#data
+{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}

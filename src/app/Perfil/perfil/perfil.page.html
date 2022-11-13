@@ -1,0 +1,64 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+   <ion-title class="head-title">PasScript</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="content">
+
+      <ion-col size-xl="8" size-lg="4" size-md="6" size-xs="12">
+        <h1 class="titulo">Perfil</h1>
+      </ion-col>
+    
+  <ion-row class="imgrow">
+    <ion-col></ion-col>
+    <ion-col size-xl="4" size-lg="4" size-md="6" size-xs="12">
+      <img class="perfilimg" src="{{avatar}}" alt="">
+      <ion-fab>
+        <ion-fab-button (click)="uptimg()" size="big"color="tertiary"><ion-icon ios="image-outline" md="image-sharp"></ion-icon></ion-fab-button>
+      </ion-fab>
+    </ion-col>
+    <ion-col></ion-col>
+  </ion-row>
+  <ion-row id="data">
+    <ion-col size-xl="2" size-lg="1" size-md="2" size-xs="1"></ion-col>
+    <ion-col size-xl="8" size-lg="10" size-md="8" size-xs="13">
+      <ion-title>
+        Nombre: 
+        <form [formGroup]="nameForm">
+          <ion-input disabled="{{estado}}" placeholder="Ingresa aqui tu nombre" ></ion-input>
+        </form>
+      </ion-title>
+    </ion-col>
+    <ion-col size-xl="2" size-lg="1" size-md="2" size-xs="1"></ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-button disabled="{{!estado}}" (click)="edit()">Editar</ion-button>
+      <ion-button disabled="{{estado}}" (click)="update()">Actualizar</ion-button>
+    </ion-col>
+  </ion-row>
+    <ion-row>
+      <ion-col></ion-col>
+    <ion-col size-xl="4" size-lg="10" size-md="10" size-xs="11">
+      <ion-title class="descri2">Descripcion:</ion-title>
+    </ion-col>
+    <ion-col></ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col size-xl="4" size-lg="2" size-md="2" size-xs="1"></ion-col>
+    <ion-col size-xl="8" size-lg="10" size-md="8" size-xs="11">
+      <form align="center" [formGroup]="descForm">
+        <ion-textarea  class="descri" disabled="{{estado}}" [autoGrow]="true" placeholder="Ingresa aqui tu descripcion" ></ion-textarea>
+      </form>
+    </ion-col>
+    <ion-col size-xl="4" size-lg="2" size-md="2" size-xs="1"></ion-col>
+  </ion-row>
+</div>
+</ion-content>
+<!--
+  formControlName="name" formControlName="description"-->

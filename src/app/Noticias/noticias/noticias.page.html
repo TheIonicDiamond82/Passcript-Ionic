@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title class="head-title">PasScript</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-col size-xl="8" size-lg="4" size-md="6" size-xs="12">
+    <h1 class="titulo">Noticias</h1>
+  </ion-col>
+  <ion-row class="g" *ngFor="let n of noticias">
+    <a href="{{ n.url }}"><ion-row>
+    <ion-col size-xl="2" size-lg="4" size-md="6" size-xs="12">
+      <img class="nots" src="{{ n.img }}" alt="">
+    </ion-col>
+    <ion-col size-xl="10" size-lg="4" size-md="6" size-xs="12">
+      <ion-row class="tit">{{ n.titulo }} </ion-row>
+      <ion-row class="desc">{{ n.descripcion }}</ion-row>
+    </ion-col>
+    </ion-row>
+  </a>
+  </ion-row>
+</ion-content>
