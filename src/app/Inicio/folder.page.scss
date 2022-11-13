@@ -26,7 +26,13 @@ ion-menu-button {
 #container a {
   text-decoration: none;
 }
-.logo
+.logo.ios
+{
+width: 70%;
+margin-top: 40%;
+margin-bottom: 30px;
+}
+.logo.md
 {
 width: 70%;
 margin-top: 40%;
