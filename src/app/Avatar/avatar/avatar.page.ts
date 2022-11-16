@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -20,16 +21,15 @@ export class AvatarPage implements OnInit {
   ];
   public perfil ="../assets/Imagenes/Avatares/logops.png";
   public img:string;
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
   selection(url: string)
   {
-    this.perfil= url;
-    location.replace("perfil")
-    console.log(this.perfil)
-    this.img = url;
+    this.perfil= this.perfil.replace(this.perfil,url);
+    console.log("El url del perfil es " + this.perfil);
+    this.router.navigateByUrl("perfil");
     
   }
 }

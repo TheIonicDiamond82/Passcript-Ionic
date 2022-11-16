@@ -1,0 +1,17 @@
+commit 3253a39d06b70157d80d7278bc8e71f8bb82192a
+Author: TheIonicDiamond82 <theionicdiamond82@gmail.com>
+Date:   Sun Nov 13 13:27:18 2022 -0700
+
+    Inicio
+
+commit f4cad47849412059ac4574cfbd4f6aa5600b338e
+Author: TheIonicDiamond82 <theionicdiamond82@gmail.com>
+Date:   Sun Nov 13 13:07:36 2022 -0700
+
+    App
+
+commit 9e659f6825fd795a4e1e8170069c265b094265d3
+Author: TheIonicDiamond82 <37746195+TheIonicDiamond82@users.noreply.github.com>
+Date:   Tue Nov 8 23:14:01 2022 -0700
+
+    Initial commit

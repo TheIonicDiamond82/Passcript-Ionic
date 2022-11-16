@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-password',
@@ -14,12 +15,12 @@ export class PasswordPage implements OnInit {
 
   
   
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
   add(){
    
-      location.replace("password-add")
+    this.router.navigateByUrl("password-add")
   }
 }

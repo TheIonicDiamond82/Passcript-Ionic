@@ -5,6 +5,7 @@ import { Component } from '@angular/core';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
+  public isLogged = false;
   public appPages = [
     { title: 'Perfil', url: 'perfil', icon: 'person-circle' },
     { title: 'Contraseñas', url: 'password', icon: 'lock-closed' },
@@ -14,4 +15,9 @@ export class AppComponent {
   ];
  public usuario = 'Eduardo Uriarte';
   constructor() {}
+
+  logout()
+  {
+    location.replace('./login');
+  }
 }

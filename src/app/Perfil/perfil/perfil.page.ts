@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {AppComponent} from '../../app.component';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { AvatarPage } from '../../Avatar/avatar/avatar.page';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -12,7 +13,7 @@ import { AvatarPage } from '../../Avatar/avatar/avatar.page';
 export class PerfilPage implements OnInit {
 
   
-  constructor(public appComponent: AppComponent, public avatarM: AvatarPage) { }
+  constructor(public appComponent: AppComponent, public avatarM: AvatarPage, private router: Router) { }
   estado:boolean=true;
   nombre:string = this.appComponent.usuario;
   perfil:string = this.avatarM.perfil;
@@ -50,7 +51,7 @@ export class PerfilPage implements OnInit {
     let aviso = "¿Deseas actualizar tu avatar de perfil?";
     if(confirm(aviso)==true)
     {
-      location.replace("avatar")
+      this.router.navigateByUrl("avatar")
     }
     else{
       
