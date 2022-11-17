@@ -1,0 +1,40 @@
+<ion-content>
+  <ion-card class="card-content login view">
+    <div class="container">
+      <ion-card-header class="display-flex">
+        <img class="logo" src="../../../assets/Imagenes/logopasscript.png">
+      </ion-card-header>
+      <h1 class="title">PasScript</h1>
+      <ion-card-content>
+        <form [formGroup]="registerForm">
+          <div align="center">
+            <ion-spinner *ngIf="this.loading"></ion-spinner>
+          </div>
+          <ion-item class="item">
+            <ion-input required type="text" formControlName="name" placeholder="Nombre"></ion-input>
+          </ion-item>
+          <ion-item class="item">
+            <ion-input required type="text" formControlName="lastname" placeholder="Apellidos"></ion-input>
+          </ion-item>
+          <ion-item class="item">
+            <ion-input class="emailinput" required type="email" formControlName="email" placeholder="Correo"></ion-input>
+          </ion-item>
+          <ion-item class="item">
+            <ion-input required [type]="type" formControlName="password" clearOnEdit="true"
+              placeholder="Contraseña"></ion-input>
+            <button item-end class="btn_eye_icon" (click)="changeType()">
+              <ion-icon [name]="(type === 'text')?'eye-off':'eye'"></ion-icon>
+            </button>
+          </ion-item>
+          <ion-button expand="block" [disabled]="!registerForm.valid" *ngIf="!this.loading" (click)="signUp()" class="login-button">
+            Regístrate
+          </ion-button>
+          <div class="info">
+          <u (click)="back_login()" class="link">¿Ya tienes una cuenta?
+              Inicia Sesión</u>
+          </div>
+        </form>
+      </ion-card-content>
+    </div>
+  </ion-card>
+</ion-content>

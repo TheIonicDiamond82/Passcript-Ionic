@@ -18,6 +18,6 @@ export class AppComponent {
 
   logout()
   {
-    location.replace('./login');
+    location.replace('./login-data');
   }
 }

@@ -29,3 +29,26 @@
 {
     font-family: "Comic Sans MS", "Comic Sans";
 }
+.confirm-toast {
+    --background: white;
+    --color: #3880ff;
+    text-align: center;
+}
+
+.error-toast {
+    --background: red;
+    --color: white;
+    text-align: center;
+}
+
+.warning-toast {
+    --background: orange;
+    --color: white;
+    text-align: center;
+}
+
+.successful-toast {
+    --background: green;
+    --color: white;
+    text-align: center;
+}
