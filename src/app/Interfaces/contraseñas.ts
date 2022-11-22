@@ -1,4 +1,7 @@
 export interface Contraseñas {
-    app: String,
-    contraseña: String
+    
+    app: string,
+    img:string,
+    contraseña: string,
+    encryp:string
 }

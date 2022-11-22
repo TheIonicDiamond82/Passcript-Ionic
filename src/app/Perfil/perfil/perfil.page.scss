@@ -30,9 +30,24 @@ ion-title
     padding: 50px;
     height: 150%;
 }
+.descri.ios
+{
+    margin-top: 10%; 
+    font-size: 25px;
+    text-align: center;
+    
+}
 .descri2
 {
     margin-top: 20px; 
+    
+    font-size: 25px;
+    text-align: center;
+    
+}
+.descri2.ios
+{
+    margin-top: -16%; 
     
     font-size: 25px;
     text-align: center;
@@ -77,6 +92,74 @@ ion-fab-button ion-icon
 }
 #data
 {
+    font-size:30px;
     margin-top: 30px;
     margin-bottom: 30px;
 }
+#datar.ios
+{
+    font-size:30px;
+    margin-top: 0px;
+    margin-bottom: 30px;
+}
+#datar
+{
+    font-size:30px;
+    margin-top: 0px;
+    margin-bottom: 30px;
+}
+
+#data2.ios
+{
+    margin-top: 30%;
+    margin-bottom: 30px;
+    background-color:transparent;
+}
+.btn_eye_icon {
+    right: 0;
+    bottom: 10px;
+    background: transparent;
+    border: none;
+    ion-icon {
+      font-size: 30px;
+      color: #c078ce;
+    }
+  }
+.btn_eye_icon:focus {
+    outline: none !important;
+  }
+  .item {
+    font-size:16px;
+    color: #0088ff;
+    --ion-background-color: rgba(255, 255, 255, 0);
+    border-radius: 50px;
+    margin: 10px;
+  }
+  .item.ios {
+    font-size:16px;
+    color: #0088ff;
+    --ion-background-color: rgba(255, 255, 255, 0);
+    border-radius: 50px;
+    margin: 10px;
+    margin-top:40px;
+  }
+  ion-input.ios
+  {
+    margin-top:30%;
+  }
+  .titc
+  {
+
+  }
+  .titc.ios
+  {
+    margin-top:-30px;
+  }
+  .move
+  {
+    margin-top:30%;
+  }
+  .move.ios
+  {
+    margin-top:0%;
+  }

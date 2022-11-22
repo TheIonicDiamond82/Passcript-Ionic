@@ -9,7 +9,6 @@
 
 <ion-content>
   <div class="content">
-
       <ion-col size-xl="8" size-lg="4" size-md="6" size-xs="12">
         <h1 class="titulo">Perfil</h1>
       </ion-col>
@@ -17,47 +16,52 @@
   <ion-row class="imgrow">
     <ion-col></ion-col>
     <ion-col size-xl="4" size-lg="4" size-md="6" size-xs="12">
-      <img class="perfilimg" src="{{avatar}}" alt="">
+      <img (click)="getProfile()"class="perfilimg" src="{{this.avatar}}" alt="">
       <ion-fab>
         <ion-fab-button (click)="uptimg()" size="big"color="tertiary"><ion-icon ios="image-outline" md="image-sharp"></ion-icon></ion-fab-button>
       </ion-fab>
     </ion-col>
     <ion-col></ion-col>
   </ion-row>
-  <ion-row id="data">
-    <ion-col size-xl="2" size-lg="1" size-md="2" size-xs="1"></ion-col>
-    <ion-col size-xl="8" size-lg="10" size-md="8" size-xs="13">
+    <form [formGroup]="nameForm">
+    <ion-row id="data">
+    <ion-col size-xl="2" size-lg="1" size-md="2" size-xs="0.5"></ion-col>
+    <ion-col size-xl="8" size-lg="10" size-md="8" size-xs="11">
       <ion-title>
-        Nombre: 
-        <form [formGroup]="nameForm">
-          <ion-input disabled="{{estado}}" placeholder="Ingresa aqui tu nombre" ></ion-input>
-        </form>
+        Nombre:
       </ion-title>
+      <ion-input disabled="{{estado}}" formControlName="nombre" value="{{name}}"placeholder="Nombre" ></ion-input>
     </ion-col>
-    <ion-col size-xl="2" size-lg="1" size-md="2" size-xs="1"></ion-col>
+    <ion-col size-xl="2" size-lg="1" size-md="2" size-xs="0.5"></ion-col>
   </ion-row>
-  <ion-row>
-    <ion-col>
-      <ion-button disabled="{{!estado}}" (click)="edit()">Editar</ion-button>
-      <ion-button disabled="{{estado}}" (click)="update()">Actualizar</ion-button>
-    </ion-col>
-  </ion-row>
-    <ion-row>
-      <ion-col></ion-col>
-    <ion-col size-xl="4" size-lg="10" size-md="10" size-xs="11">
-      <ion-title class="descri2">Descripcion:</ion-title>
+  <ion-row id="data">
+    <ion-col></ion-col>
+    <ion-col size-xl="8" size-lg="10" size-md="8" size-xs="11">
+      <ion-title>
+        Apellido: 
+      </ion-title>
+      <ion-input disabled="{{estado}}" formControlName="apellido"value="{{last}}" placeholder="Apellido" ></ion-input>
     </ion-col>
     <ion-col></ion-col>
-  </ion-row>
-  <ion-row>
-    <ion-col size-xl="4" size-lg="2" size-md="2" size-xs="1"></ion-col>
-    <ion-col size-xl="8" size-lg="10" size-md="8" size-xs="11">
-      <form align="center" [formGroup]="descForm">
-        <ion-textarea  class="descri" disabled="{{estado}}" [autoGrow]="true" placeholder="Ingresa aqui tu descripcion" ></ion-textarea>
-      </form>
+  </ion-row >
+  <ion-row id="data">
+    <ion-col></ion-col>
+    <ion-col size-xl="4" size-lg="10" size-md="10" size-xs="11">
+      <ion-title class="descri2">Descripcion:</ion-title>
+          <ion-textarea  class="descri" disabled="{{estado}}" [autoGrow]="true" formControlName="descripcion" value="{{desc}}"placeholder="Ingresa aqui tu descripcion" ></ion-textarea>
     </ion-col>
-    <ion-col size-xl="4" size-lg="2" size-md="2" size-xs="1"></ion-col>
-  </ion-row>
+    <ion-col></ion-col>
+  </ion-row >
+  </form>
+  <div class="move">
+    <ion-button disabled="{{!estado}}"  ion-button type="submit" (click)="editU()">Editar</ion-button>
+    <ion-button disabled="{{estado}}"  ion-button type="submit" (click)="update()">Actualizar</ion-button>
+      <ion-button expand="block" color="danger" ion-button type="submit"(click)="delete()">Eliminar usuario</ion-button>
+    </div>
+  
+          <!--<ion-button expand="block" color="danger" ion-button type="submit"
+          (click)="otroChange()">Otro</ion-button>-->
+     
 </div>
 </ion-content>
 <!--

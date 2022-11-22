@@ -7,7 +7,7 @@ ion-content{
   margin: 16px;
   border-radius: 32px;
   overflow: auto;
-  height: 95vh;
+  height: 98vh;
 }
 
 .display-flex {
@@ -21,8 +21,7 @@ ion-content{
   margin-left: auto;
   margin-right: auto;
   border-radius: 15px;
-  width:70%;
-  height:70%;
+  width:50%;
 }
 
 .button {
@@ -122,7 +121,7 @@ ion-card-content {
   //     width: 100%;
   // }
   .card-content {
-    height: 86vh;
+    height: 84vh;
     margin: 16px;
   }
   .info2 {
@@ -132,8 +131,10 @@ ion-card-content {
 
 @media only screen and (max-width: 1023px) and (min-width: 767px) {
   .card-content {
-    width: 60%;
-    margin-left: 20%;
+    text-align: center;
+    height: 90vh;
+    width: 70%;
+    margin-left: 15%;
   }
   //   .input-container,.login-button,.info {
   //       width: 50%;
@@ -163,25 +164,30 @@ ion-card-content {
 
 
 .title{
+
     text-align: center;
     color:#fff;
-    margin-bottom: 0;
-    padding-bottom: 0;
     // font-size: 40px;
   }
   
 .link {
     color: #fff;
     font-size: 18px;
+    margin-right: 0px; 
+    margin-left: 2px;
+    margin-top: -5px;
   }
 
 .linkforgot
 {
     color:#fff;
     font-size: 18px;
-  margin-right: 0px; 
-  margin-left: auto;
+  margin-left: 20%;
+  margin-top: -5px;
 }
-ionf{
-    margin-left: 200px;
+.ionf{
+
+    font-size: 25px;
+    height: 50px;
+   
 }

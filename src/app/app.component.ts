@@ -1,11 +1,15 @@
 import { Component } from '@angular/core';
+import { FolderPage } from './Inicio/folder.page';
+import { LoginDataPage } from './LoginData/login-data/login-data.page';
+import { PerfilPage } from './Perfil/perfil/perfil.page';
+import { AlertService } from './Services/alert.service';
+
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
-  public isLogged = false;
   public appPages = [
     { title: 'Perfil', url: 'perfil', icon: 'person-circle' },
     { title: 'Contraseñas', url: 'password', icon: 'lock-closed' },
@@ -13,11 +17,12 @@ export class AppComponent {
     { title: 'Ayuda', url: 'help', icon: 'information-circle' },
   
   ];
- public usuario = 'Eduardo Uriarte';
-  constructor() {}
-
+  constructor(private login:LoginDataPage, private perfil:PerfilPage,private alert: AlertService) {}
+  public usuario = JSON.parse(localStorage.getItem("FullName"));
   logout()
   {
-    location.replace('./login-data');
+    this.login.logOut();
+
+    
   }
 }

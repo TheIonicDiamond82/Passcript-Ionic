@@ -7,14 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { AvatarPageRoutingModule } from './avatar-routing.module';
 
 import { AvatarPage } from './avatar.page';
+import { AngularFirestoreCollection } from '@angular/fire/compat/firestore';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    AvatarPageRoutingModule
+    AvatarPageRoutingModule,
   ],
-  declarations: [AvatarPage]
+  declarations: [AvatarPage],
 })
 export class AvatarPageModule {}
